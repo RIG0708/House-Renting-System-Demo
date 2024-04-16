@@ -7,12 +7,12 @@ pipeline {
              }
           }
          stage('Build') {
-             step {
+             steps {
                 bat 'dotnet build HouseRentingSystem.sln --configuration Release'
              }
           }
           stage('Test') {
-              step {
+              steps {
                  bat 'dotnet test HouseRentingSystem.Tests/HouseRentingSystem.Tests.csproj'
                  }
           }
